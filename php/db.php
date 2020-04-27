@@ -1,7 +1,7 @@
-<?php 
-error_reporting(-1);
-
+<?php
+	error_reporting(-1);
 	ini_set('display_errors', 1);
+
 	class Database{
 		private $dsn = "mysql:host=localhost;dbname=diplom";
 		private $user = "root";
@@ -15,6 +15,32 @@ error_reporting(-1);
 				echo $e->getMessage();
 			}
 		}
+
+
+		public function adminLogin($username,$password)
+		{
+
+			$sql = "SELECT * from администратор WHERE логин= :login AND пароль= :password";
+			$stmt = $this->conn->prepare($sql);
+			$stmt->execute([
+				'login'=>$username,
+				'password'=>$password
+			]);
+			$l_records = $stmt->fetch(PDO::FETCH_ASSOC);
+
+			if ($l_records) {
+				echo json_encode(array('success' => 1));
+			
+
+
+			} else {
+					echo json_encode(array('success' => 0));
+
+			}
+
+}
+
+
 
         public function checkStep1($mobile,$snils)
         {

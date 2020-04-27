@@ -1,7 +1,5 @@
 <?php
 
-ASDASDASDASDA
-
 
 include '../php/action.php';
 
@@ -22,13 +20,7 @@ ini_set('display_errors', 'Off');
 
 <body class="bg-gradient-primary ">
 
-
-
-
-
     <div class="container bg-light mt-5 mb-5 card p-5">
-
-
 
         <div class="row ">
             <div class="col-12">

@@ -1,22 +1,42 @@
 <?php
-session_start();
+	session_start();
 	error_reporting(-1);
 
 	ini_set('display_errors', 1);
 
+
 	require_once 'db.php';
+
+
 	$db = new Database();
 
 	$step1 = true;
 
-	function selected($var, $value) 
+
+	function selected($var, $value)
 {
 	if (!is_array($var)) {
 		$var = explode(',', $var);
 	}
- 
+
 	return (in_array($value, $var)) ? ' selected' : '';
 }
+
+
+if (isset($_POST['username']) && $_POST['username'] && isset($_POST['password']) && $_POST['password']) {
+
+    $username= $_POST['username'];
+    $password= $_POST['password'];
+
+		$_SESSION['username']= $username;
+
+	$db->adminLogin($username,$password);
+
+
+
+}
+
+
 
 
 if(isset($_POST['step1'])){
