@@ -478,6 +478,9 @@ mark,
   color: #858796;
 }
 
+.bg-black {
+  background-color: black;
+}
 .blockquote-footer::before {
   content: "\2014\00A0";
 }
@@ -2326,6 +2329,18 @@ fieldset:disabled a.btn {
   background-color: #1cc88a;
   border-color: #1cc88a;
 }
+
+.btn-success1 {
+  color: #fff;
+  background-color: #29aa45;
+  border-color: #1cc88a;
+}
+.btn-success1:hover {
+  color: #fff;
+  background-color: #17a673;
+  border-color: #169b6b;
+}
+
 
 .btn-success:hover {
   color: #fff;
@@ -10582,6 +10597,22 @@ a:focus {
     height: calc(20rem - 43px) !important;
   }
 }
+
+.bg-login-image2 {
+  background: url("https://avatars.mds.yandex.net/get-zen_doc/103153/pub_5d767292df944400ad528e97_5d7754d01e8e3f00b0212cb8/scale_1200");
+  background-position: center;
+  background-size: cover;
+}
+
+
+.bg-login-image3 {
+  background: url("https://avatars.mds.yandex.net/get-zen_doc/164147/pub_5be41124bb273100aa27a929_5be41743dac2dc00aa9b2010/scale_1200");
+  background-position: center;
+  background-size: cover;
+}
+
+
+
 
 .bg-login-image {
   background: url("https://sun9-58.userapi.com/c851536/v851536387/1a6391/5rsF5lE8ZYc.jpg");

@@ -26,7 +26,7 @@
 
 </head>
 
-<body class="bg-gradient-warning">
+<body class="bg-gradient-light">
 
 
 
@@ -41,22 +41,22 @@
           <div class="card-body p-0">
             <!-- Nested Row within Card Body -->
             <div class="row">
-              <div class="col-lg-6 d-none d-lg-block bg-login-image3"></div>
+              <div class="col-lg-6 d-none d-lg-block bg-login-image2"></div>
               <div class="col-lg-6">
                 <div class="p-5">
                   <div class="text-center">
                     <h1 class="h4 text-gray-900 mb-4">Добро пожаловать!</h1>
                     <hr>
-                    <h4 class="h5 text-gray-900 mb-4">Вход для администратора клиники</h4>
+                    <h4 class="h5 text-gray-900 mb-4">Вход для врача клиники</h4>
                   </div>
                   <form class="user" method="post" id="loginform">
                     <div class="form-group">
-                      <input type="text" class="form-control form-control-user"  id="username" name="username" aria-describedby="emailHelp" placeholder="Логин">
+                      <input type="text" class="form-control form-control-user"  id="usernameDoctor" name="usernameDoctor" aria-describedby="emailHelp" placeholder="Логин">
                     </div>
                     <div class="form-group">
-                      <input type="password" class="form-control form-control-user" id="password" name="password" placeholder="Пароль">
+                      <input type="password" class="form-control form-control-user" id="passwordDoctor" name="passwordDoctor" placeholder="Пароль">
                     </div>
-                                       <div class="form-group">
+                        <div class="form-group">
                       <div class="custom-control custom-checkbox small">
                         <input type="checkbox" class="custom-control-input" id="customCheck">
                         <label class="custom-control-label" for="customCheck">Запомнить меня</label>
@@ -66,7 +66,7 @@
                   </form>
                             <hr>
                   <div class="text-center">
-                    <a class="small" href="">Забыли пароль? Обратитесь к системному администратору ^_^</a>
+                    <a class="small" href="">Забыли пароль? Обратитесь к администратору ^_^</a>
                   </div>
                   <div class="text-center">
                    
@@ -115,7 +115,13 @@ Toast.fire({
   icon: 'success',
   title: 'Сегодня вы выглядите прекрасно :)'
 })
-                      location.href = 'index.php';
+setTimeout(
+  () => {
+    location.href = 'index.php';
+  },
+  2 * 1000
+);
+
                   }
                   else
                   {
@@ -124,7 +130,7 @@ Toast.fire({
                       title: 'Ой-ей...',
                       text: 'Кажется, вы ввели неверный логин или пароль!',
                       confirmButtonText: 'Давайте я попробую еще раз :)',
-                      footer: '<a href>Не помните пароль?</a>'
+                      footer: '<a href>Не помните пароль? Обратитесь к администратору!</a>'
                     })
                   }
              }
